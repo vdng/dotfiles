@@ -1,0 +1,88 @@
+################################################
+#                   GENERAL                    #
+################################################
+# Commands
+browser "qutebrowser --target window %u &"
+refresh-on-startup yes
+confirm-exit yes
+
+macro m set browser "mpv '%u'"; open-in-browser; set browser "qutebrowser --target window %u &"
+
+# Articles
+max-items 50
+
+# Load feeds in parallel
+reload-threads 100
+
+################################################
+#                   STRINGS                    #
+################################################
+datetime-format    "%b-%d %H:%M"
+feedlist-format    "%3i %t (%U) %S"
+articlelist-format "%D %?T?│%-30T  ?│ %t "
+
+################################################
+#                 COLORSCHEME                  #
+################################################
+color   listnormal          color230    default
+color   listnormal_unread   default     default
+color   listfocus           yellow      default
+color   listfocus_unread    yellow      default   bold
+color   info                black       cyan
+
+################################################
+#                 KEYBINDINGS                  #
+################################################
+# Movement
+
+# Generic bindings
+bind-key t down
+bind-key s up
+bind-key SPACE pagedown
+bind-key BACKSPACE pageup
+bind-key g home
+bind-key G end
+
+bind-key q hard-quit
+
+# Navigation
+unbind-key J
+unbind-key K
+unbind-key r
+unbind-key ^R
+unbind-key R
+unbind-key q
+unbind-key Q
+unbind-key k
+unbind-key ENTER
+
+bind-key T next
+bind-key S prev
+bind-key T next-feed articlelist
+bind-key S prev-feed articlelist
+bind-key r open
+bind-key c quit
+bind-key q hard-quit
+
+bind-key l reload
+bind-key L reload-all
+bind-key ^L reload-urls
+
+bind-key h toggle-show-read-feeds
+
+# Tag & Bookmark
+bind-key ^B bookmark
+
+bind-key b set-tag feedlist
+bind-key ^B clear-tag feedlist
+
+# Sort
+bind-key j sort
+bind-key J rev-sort
+
+# Delete
+unbind-key D
+bind-key d delete-article
+
+# Save
+bind-key w save

@@ -1,6 +1,10 @@
 - clean: ['~']
 
 - link:
+    ~/.config/newsboat/:            # Newsboat
+        glob: true
+        path: newsboat/*
+        create: true
     ~/.vimrc:                       # Vim
     ~/.vim/vimrcs/:
         glob: true
