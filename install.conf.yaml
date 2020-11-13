@@ -7,3 +7,6 @@
         path: vimrcs/*
         create: true
     ~/.Xresources:                  # Xresources
+    ~/.config/zathura/zathurarc:    # Zathura
+        create: true
+        path: zathura/zathurarc

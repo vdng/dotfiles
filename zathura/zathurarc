@@ -1,0 +1,88 @@
+################################################
+#                   GENERAL                    #
+################################################
+# Search
+set incremental-search true
+
+# Font
+set font "Hack Nerd Font Mono 11"
+
+# Clipboard
+set selection-clipboard clipboard
+
+# First page on the left in side-by-side mode
+set first-page-column 1:1
+
+################################################
+#                 KEYBINDINGS                  #
+################################################
+# Default navigation
+map s scroll up
+map t scroll down
+map c scroll left
+map r scroll right
+
+map S navigate previous
+map T navigate next
+
+# Consequences of navigation mapping
+map b adjust_window width
+map h rotate
+
+# Reload
+map l reload
+
+# Fullscreen navigation
+map [fullscreen] s scroll up
+map [fullscreen] t scroll down
+map [fullscreen] S navigate previous
+map [fullscreen] T navigate next
+
+# Index navigation
+map [index] s navigate_index up
+map [index] t navigate_index down
+map [index] r navigate_index expand
+map [index] R navigate_index expand-all
+map [index] c navigate_index collapse
+map [index] C navigate_index collapse-all
+
+################################################
+#                 COLORSCHEME                  #
+################################################
+# Lighhaus Colorscheme
+set notification-error-bg       "#FC2929"
+set notification-error-fg       "#18191E"
+set notification-warning-bg     "#E25600"
+set notification-warning-fg     "#18191E"
+set notification-bg             "#D68EB2"
+set notification-fg             "#18191E"
+
+set completion-bg               "#18191E"
+set completion-fg               "#FFEE79"
+set completion-group-bg         "#00BFA4"
+set completion-group-fg         "#18191E"
+set completion-highlight-bg     "#FFFF00"
+set completion-highlight-fg     "#18191E"
+
+set index-bg                    "#18191E"
+set index-fg                    "#44B273"
+set index-active-bg             "#21252D"
+set index-active-fg             "#FFFF00"
+
+set inputbar-bg                 "#21252D"
+set inputbar-fg                 "#FFEE79"
+set statusbar-bg                "#21252D"
+set statusbar-fg                "#D68EB2"
+
+set highlight-color             "#D68EB2"
+set highlight-active-color      "#ff79c6"
+
+set default-bg                  "#18191E"
+set default-fg                  "#FFEE79"
+
+set render-loading              true
+set render-loading-fg           "#FFEE79"
+set render-loading-bg           "#18191E"
+
+set recolor-lightcolor          "#21252D"
+set recolor-darkcolor           "#FFEE79"
