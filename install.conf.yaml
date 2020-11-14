@@ -1,6 +1,10 @@
 - clean: ['~']
 
 - link:
+    ~/.config/awesome/:             # AwesomeWM
+        glob: true
+        path: awesome/*
+        create: true
     ~/.config/newsboat/:            # Newsboat
         glob: true
         path: newsboat/*
