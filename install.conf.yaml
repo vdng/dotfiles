@@ -9,6 +9,10 @@
         glob: true
         path: newsboat/*
         create: true
+    ~/.config/qutebrowser/:         # Qutebrowser
+        glob: true
+        path: qutebrowser/*
+        create: true
     ~/.vimrc:                       # Vim
     ~/.vim/vimrcs/:
         glob: true
