@@ -1,0 +1,83 @@
+!===============================================
+!                 COLORSCHEME                  !
+!===============================================
+!! Colorscheme: Lighthaus
+! SpeciaL
+*.foreground  : #FFEE79
+*.background  : #18191E
+*.cursorColor : #FFFF00
+
+! Black
+*.color0      : #18191E
+*.color8      : #21252D
+
+! Red
+*.color1      : #FC2929
+*.color9      : #FC5050
+
+! Green
+*.color2      : #44B273
+*.color10     : #50C16E
+
+! Orange
+*.color3      : #E25600
+*.color11     : #ED722E
+
+! Blue
+*.color4      : #1D918B
+*.color12     : #47A8A1
+
+! Purple
+*.color5      : #D16BB7
+*.color13     : #D68EB2
+
+! Cyan
+*.color6      : #00BFA4
+*.color14     : #5AD1AA
+
+! White
+*.color7      : #CCCCCC
+*.color15     : #FFFADE
+
+!================================================
+!                    URXVT                      !
+!================================================
+URxvt.font           : xft:Hack Nerd Font Mono:style=Regular:size=10
+URxvt.boldFont       : xft:Hack Nerd Font Mono:style=Bold:size=10
+URxvt.italicFont     : xft:Hack Nerd Font Mono:style=Italic:size=10
+URxvt.italicBoldFont : xft:Hack Nerd Font Mono:style=Bold Italic:size=10
+
+URxvt.letterSpace     : 0
+URxvt.lineSpace       : 0
+URxvt.internalBorder  : 0
+URxvt.cursorBlink     : true
+URxvt.cursorUnderline : false
+URxvt.saveline        : 2048
+URxvt.scrollBar       : false
+URxvt.scrollBar_right : false
+URxvt.urgentOnBell    : true
+URxvt.depth           : 24
+URxvt.iso14755        : false
+URxvt*transparent     : true
+URxvt*shading         : 85
+
+
+!================================================
+!                  XSCREENSAVER                 !
+!================================================
+! xft
+Xft.antialias: true
+Xft.dpi: 96
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+! XScreenSaver font settings
+xscreensaver.Dialog.headingFont:        -*-hack-bold-r-*-*-28-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-hack-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-hack-medium-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-hack-medium-r-*-*-26-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-hack-bold-r-*-*-20-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-hack-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-hack-bold-r-*-*-20-*-*-*-*-*-*-*
