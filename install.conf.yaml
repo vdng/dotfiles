@@ -13,6 +13,9 @@
         glob: true
         path: qutebrowser/*
         create: true
+    ~/.config/ranger/rc.conf:       # Ranger
+        path: ranger/rc.conf
+        force: true
     ~/.vimrc:                       # Vim
     ~/.vim/vimrcs/:
         glob: true
