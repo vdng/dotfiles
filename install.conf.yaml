@@ -5,6 +5,9 @@
         glob: true
         path: awesome/*
         create: true
+    ~/.config/feh/keys:             # Feh
+        path: feh/keys
+        create: true
     ~/.config/newsboat/:            # Newsboat
         glob: true
         path: newsboat/*

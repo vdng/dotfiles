@@ -1,0 +1,52 @@
+################################################
+#                  MOVEMENTS                   #
+################################################
+toggle_caption # c
+save_image # s
+reload_image # r
+
+scroll_left c
+scroll_down t
+scroll_up s
+scroll_right r
+
+zoom_in plus
+zoom_out minus
+
+################################################
+#               IMAGE NAVIGATION               #
+################################################
+toggle_fixed_geometry # g
+
+next_img T
+prev_img S
+jump_first g
+jump_last G
+jump_fwd C-d
+jump_back C-u
+
+toggle_pause p
+
+################################################
+#                     FILE                     #
+################################################
+toggle_pause # h
+size_to_image # w
+
+reload_image h
+save_image w
+
+################################################
+#                     VIEW                     #
+################################################
+toggle_caption .
+size_to_image b
+
+################################################
+#                     MENU                     #
+################################################
+menu_up Up s
+menu_down Down t
+menu_parent Left c
+menu_child Right r
+menu_close Escape q
