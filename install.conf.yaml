@@ -16,6 +16,10 @@
     ~/.config/ranger/rc.conf:       # Ranger
         path: ranger/rc.conf
         force: true
+    ~/.config/rofi/:                # Rofi
+        glob: true
+        path: rofi/*
+        create: true
     ~/.vimrc:                       # Vim
     ~/.vim/vimrcs/:
         glob: true
