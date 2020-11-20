@@ -56,3 +56,7 @@
         /etc/X11/xorg.conf.d/:      # Xorg
             glob: true
             path: xorg/*
+
+- git:
+    ~/.config/zsh/plugins/fast-syntax-highlighting:
+        url: https://github.com/zdharma/fast-syntax-highlighting
