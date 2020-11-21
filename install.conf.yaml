@@ -11,6 +11,9 @@
     ~/.config/feh/keys:             # Feh
         path: feh/keys
         create: true
+    ~/.config/networkmanager-dmenu/config.ini:  # Network manager dmenu
+        path: networkmanager-dmenu/config.ini
+        create: true
     ~/.config/newsboat/:            # Newsboat
         glob: true
         path: newsboat/*
