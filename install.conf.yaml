@@ -53,9 +53,11 @@
 
 - sudo:
     - link:
-        /etc/X11/xorg.conf.d/:      # Xorg
+        /etc/X11/xorg.conf.d/:      # X11
             glob: true
-            path: xorg/*
+            path: X11/xorg/*
+        /usr/share/X11/xkb/symbols/fr:
+            path: X11/xkb/fr
 
 - git:
     ~/.config/zsh/plugins/fast-syntax-highlighting:
