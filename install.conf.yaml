@@ -38,6 +38,8 @@
         path: vimrcs/*
         create: true
     ~/.Xresources:                  # Xresources
+    ~/.xscreensaver:                # Xscreensaver
+        force: true
     ~/.xsession:                    # xsession
     ~/.config/zathura/zathurarc:    # Zathura
         create: true
