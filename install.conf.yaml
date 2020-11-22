@@ -18,6 +18,8 @@
         glob: true
         path: newsboat/*
         create: true
+    ~/.config/pulsemixer.cfg:       # Pulsemixer
+        path: pulsemixer/pulsemixer.cfg
     ~/.config/qutebrowser/:         # Qutebrowser
         glob: true
         path: qutebrowser/*
