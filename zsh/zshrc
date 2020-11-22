@@ -55,4 +55,5 @@ bindkey -M vicmd , vi-rev-repeat-find
 source $ZDOTDIR/plugins/cursor_mode.zsh
 source $ZDOTDIR/plugins/bd.zsh
 source $ZDOTDIR/plugins/colored-man-pages.zsh
+source $ZDOTDIR/plugins/fzf-tab/fzf-tab.plugin.zsh
 source $ZDOTDIR/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
