@@ -11,6 +11,7 @@
     ~/.config/feh/keys:             # Feh
         path: feh/keys
         create: true
+    ~/.lesskey:                     # Lesskey
     ~/.config/networkmanager-dmenu/config.ini:  # Network manager dmenu
         path: networkmanager-dmenu/config.ini
         create: true
