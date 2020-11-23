@@ -59,22 +59,3 @@ URxvt.urgentOnBell    : true
 URxvt.depth           : 32
 URxvt.iso14755        : false
 
-!================================================
-!                  XSCREENSAVER                 !
-!================================================
-! xft
-Xft.antialias: true
-Xft.dpi: 96
-Xft.hinting: true
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-Xft.rgba: rgb
-
-! XScreenSaver font settings
-xscreensaver.Dialog.headingFont:        -*-hack-bold-r-*-*-28-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-hack-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-hack-medium-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-hack-medium-r-*-*-26-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-hack-bold-r-*-*-20-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-hack-medium-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-hack-bold-r-*-*-20-*-*-*-*-*-*-*

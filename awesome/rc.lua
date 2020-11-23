@@ -77,9 +77,6 @@ awful.rules.rules = main.rules(
 --                  STARTUP                   --
 ------------------------------------------------
 
--- Screen saver
-awful.util.spawn_with_shell("xscreensaver -no-splash")
-
 -- Compositor
 awful.util.spawn_with_shell("picom -b")
 

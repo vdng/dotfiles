@@ -103,7 +103,18 @@ function _M.get()
               {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",
-              function() awful.spawn("xscreensaver-command -lock") end,
+              function() awful.spawn("env \
+                XSECURELOCK_COMPOSITE_OBSCURER=0 \
+                XSECURELOCK_PASSWORD_PROMPT=disco \
+                XSECURELOCK_AUTH_BACKGROUND_COLOR=#18191e \
+                XSECURELOCK_AUTH_FOREGROUND_COLOR=#ffee79 \
+                XSECURELOCK_AUTH_TIMEOUT=5 \
+                XSECURELOCK_BLANK_TIMEOUT=5 \
+                XSECURELOCK_BLANK_DPMS_STATE=off \
+                XSECURELOCK_SHOW_DATETIME=1 \
+                XSECURELOCK_DATETIME_FORMAT='%B %A %d - %R' \
+                XSECURELOCK_SHOW_HOSTNAME=0 \
+                xsecurelock") end,
               {description = "lock session", group = "awesome"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
