@@ -66,6 +66,8 @@
 
 - sudo:
     - link:
+        /etc/ldm.conf:              # ldm
+            path: ldm/ldm.conf
         /etc/X11/xorg.conf.d/:      # X11
             glob: true
             path: X11/xorg/*
