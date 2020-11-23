@@ -14,6 +14,9 @@
     ~/.config/greenclip.cfg:        # Greenclip
         path: greenclip/greenclip.cfg
     ~/.lesskey:                     # Lesskey
+    ~/.config/mimi/mime.conf:       # Mimi
+        path: mimi/mime.conf
+        create: true
     ~/.config/networkmanager-dmenu/config.ini:  # Network manager dmenu
         path: networkmanager-dmenu/config.ini
         create: true
