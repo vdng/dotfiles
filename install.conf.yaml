@@ -36,6 +36,10 @@
     ~/.config/ranger/rc.conf:       # Ranger
         path: ranger/rc.conf
         force: true
+    ~/.config/redshift/redshift.conf: # Redhift
+        create: true
+        path: redshift/redshift.conf
+        force: true
     ~/.config/rofi/:                # Rofi
         glob: true
         path: rofi/*
