@@ -44,6 +44,11 @@
         glob: true
         path: rofi/*
         create: true
+    ~/.config/spicetify/:           # Spicetify
+        glob: true
+        path: spicetify/*
+        create: true
+        force: true
     ~/.config/termite/config:       # Termite
         path: termite/config
         create: true
