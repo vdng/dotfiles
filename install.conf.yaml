@@ -11,6 +11,9 @@
     ~/.config/feh/keys:             # Feh
         path: feh/keys
         create: true
+    ~/.config/fontconfig/fonts.conf:  # Font config
+        path: fontconfig/fonts.conf
+        create: true
     ~/.config/greenclip.cfg:        # Greenclip
         path: greenclip/greenclip.cfg
     ~/.lesskey:                     # Lesskey
