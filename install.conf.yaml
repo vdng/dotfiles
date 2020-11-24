@@ -16,6 +16,10 @@
         create: true
     ~/.config/greenclip.cfg:        # Greenclip
         path: greenclip/greenclip.cfg
+    ~/.config/gtk-3.0/:
+        glob: true
+        path: gtk-3.0/*
+        force: true
     ~/.lesskey:                     # Lesskey
     ~/.config/mimi/mime.conf:       # Mimi
         path: mimi/mime.conf
