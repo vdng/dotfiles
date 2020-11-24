@@ -44,6 +44,9 @@
         glob: true
         path: rofi/*
         create: true
+    ~/.config/termite/config:       # Termite
+        path: termite/config
+        create: true
     ~/.vimrc:                       # Vim
     ~/.vim/vimrcs/:
         glob: true

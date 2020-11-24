@@ -1,5 +1,5 @@
 local _M = {
-  terminal = "urxvt",
+  terminal = "termite -t termite",
   modkey = "Mod4",
 }
 
