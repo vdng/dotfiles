@@ -1,6 +1,9 @@
 - clean: ['~']
 
 - link:
+    ~/.config/aliases/aliases:      # Aliases
+        path: aliases/aliases
+        create: true
     ~/.config/awesome/:             # AwesomeWM
         glob: true
         path: awesome/*
@@ -32,3 +35,17 @@
     ~/.config/zathura/zathurarc:    # Zathura
         create: true
         path: zathura/zathurarc
+    ~/.config/zsh/plugins/:         # Zsh
+        glob: true
+        path: zsh/plugins/*
+        create: true
+    ~/.config/zsh/prompts/:
+        glob: true
+        path: zsh/prompts/*
+        create: true
+    ~/.zshenv:
+        path: zsh/zshenv
+    ~/.config/zsh/.zshrc:
+        path: zsh/zshrc
+    ~/.config/zsh/ascii_art:
+        path: zsh/ascii_art

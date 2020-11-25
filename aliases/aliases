@@ -1,0 +1,112 @@
+#!bin/bash
+
+alias news='newsboat'
+
+##########################
+#          GIT           #
+##########################
+alias ga='git add'
+alias gav='git add --verbose'
+alias gau='git add --update'
+
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+alias gbD='git branch --delete --force'
+alias gbr='git branch --remote'
+
+alias gc='git commit -v'
+alias gc!='git commit -v --amend'
+alias gcn!='git commit -v --no-edit --amend'
+alias gcm='git commit -m'
+
+alias gco='git checkout'
+
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gdw='git diff --word-diff'
+alias gdcw='git diff --cached --word-diff'
+
+alias gdt='git difftool'
+
+alias gf='git fetch'
+alias gfa='git fetch --all -prune'
+alias gfo='git fetch origin'
+
+alias glg='git log --graph'
+alias glo='git log --oneline --decorate'
+alias glog='git log --oneline --decorate --graph'
+alias gloga='git log --oneline --decorate --graph --all'
+
+alias gme='git merge'
+
+alias gp='git push'
+alias gpv='git push -v'
+alias gpd='git push --dry-run'
+alias gpf='git push --force-with-lease'
+alias gpf!='git push --force'
+
+alias gl='git pull'
+
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase --interactive'
+alias grbs='git rebase --skip'
+
+alias grev='git revert'
+
+alias grh='git reset'
+alias grhh='git reset --hard'
+
+alias grm='git rm'
+alias grmc='git rm --cached'
+
+alias gss='git status --short --branch'
+alias gst='git status'
+
+##########################
+#         GREP           #
+##########################
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+##########################
+#          LS            #
+##########################
+
+alias l='ls -lAFh --color=auto'
+alias ll='ls -lFh --color=auto'
+alias lsd='ls -lFh --color=auto | grep --color=never "^d"'
+alias ls='ls -h --color=auto'
+
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+##########################
+#         WIFI           #
+##########################
+
+alias nmwl='nmcli device wifi list'
+alias nmwco='nmcli --ask device wifi connect'
+
+##########################
+#      YOUTUBE DL        #
+##########################
+
+alias yt='youtube-dl -o "~/tmp/youtube-dl/%(title)s.%(ext)s"'
+alias ytbest='youtube-dl -f bestvideo+bestaudio -o "~/tmp/youtube-dl/%(title)s.%(ext)s"'
+alias ytm4a='youtube-dl --format "bestaudio[ext=m4a]" -o "~/tmp/youtube-dl/%(title)s.%(ext)s"'
+alias ytmp3='youtube-dl -x --audio-format mp3 -o "~/tmp/youtube-dl/%(title)s.%(ext)s"'
+alias ytm4a-playlist='youtube-dl -i --format "bestaudio[ext=m4a]" -o "~/tmp/youtube-dl/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"'
+alias ytmp3-playlist='youtube-dl -i -x --audio-format mp3 -o "~/tmp/youtube-dl/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"'
+alias yt-playlist='youtube-dl -i -o "~/tmp/youtube-dl/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"'
+# List formats & prompt for one
+ytf() {
+    youtube-dl --list-formats "$1"
+    echo "== Please copy-paste below 👇 one 'format code' listed above ☝️"
+    read -r FORMAT
+    youtube-dl --format "$FORMAT" "$1"
+}

@@ -1,0 +1,57 @@
+###############################
+#           OPTIONS           #
+###############################
+
+cat ~/.config/zsh/ascii_art
+
+# Zsh directory stack
+setopt AUTO_PUSHD               # Push the current directory on the stack
+setopt PUSHD_IGNORE_DUPS        # Do not store duplicates in the stack
+setopt PUSHD_SILENT             # Do not print th edirectory stack after pushd or popd
+
+# Vim commands
+bindkey -v
+
+# aliases
+source $XDG_CONFIG_HOME/aliases/aliases
+
+# Completion
+autoload -Uz compinit; compinit
+_comp_options+=(globdots)       # hidden files
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# Prompt
+fpath=($ZDOTDIR/prompts $fpath)
+autoload -Uz prompt_purification_setup; prompt_purification_setup
+
+###############################
+#          KEYBINDINGS        #
+###############################
+
+# Avoid invisible mistakes
+bindkey -s $' ' ' '
+
+# vi-mode
+bindkey -M vicmd c vi-backward-char
+bindkey -M vicmd r vi-forward-char
+bindkey -M vicmd t vi-down-line-or-history
+bindkey -M vicmd s vi-up-line-or-history
+bindkey -M vicmd $ vi-end-of-line
+bindkey -M vicmd 0 vi-digit-or-beginning-of-line
+bindkey -M vicmd l vi-change
+bindkey -M vicmd L vi-change-eol
+bindkey -M vicmd dd vi-change-whole-line
+bindkey -M vicmd h vi-replace-chars
+bindkey -M vicmd H vi-replace
+bindkey -M vicmd k vi-substitute
+bindkey -M vicmd é vi-forward-word
+bindkey -M vicmd É vi-forward-blank-word
+bindkey -M vicmd \; vi-repeat-find
+bindkey -M vicmd , vi-rev-repeat-find
+
+###############################
+#            PLUGINS          #
+###############################
+source $ZDOTDIR/plugins/cursor_mode.zsh
+source $ZDOTDIR/plugins/bd.zsh
+source $ZDOTDIR/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
