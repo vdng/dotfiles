@@ -81,7 +81,7 @@ awful.rules.rules = main.rules(
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 
 -- Compositor
-awful.util.spawn_with_shell("compton")
+awful.util.spawn_with_shell("picom -b")
 
 -- Load display
 awful.util.spawn_with_shell("autorandr -c")

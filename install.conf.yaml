@@ -19,6 +19,9 @@
         glob: true
         path: newsboat/*
         create: true
+    ~/.config/picom/picom.conf:     # Picom
+        path: picom/picom.conf
+        create: true
     ~/.config/pulsemixer.cfg:       # Pulsemixer
         path: pulsemixer/pulsemixer.cfg
     ~/.config/qutebrowser/:         # Qutebrowser
