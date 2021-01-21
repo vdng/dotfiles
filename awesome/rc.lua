@@ -83,14 +83,5 @@ awful.util.spawn_with_shell("xscreensaver -no-splash")
 -- Compositor
 awful.util.spawn_with_shell("compton")
 
--- Touchpad settings
-awful.util.spawn_with_shell("xinput set-prop 'MSFT0001:00 06CB:CD3E Touchpad' 'libinput Accel Speed' 0.5")
-awful.util.spawn_with_shell("xinput set-prop 'MSFT0001:00 06CB:CD3E Touchpad' 'libinput Middel Emulation Enabled' 1")
-awful.util.spawn_with_shell("xinput set-prop 'MSFT0001:00 06CB:CD3E Touchpad' 'libinput Natural Scrolling Enabled' 1")
-awful.util.spawn_with_shell("xinput set-prop 'MSFT0001:00 06CB:CD3E Touchpad' 'libinput Tapping Enabled' 1")
-
--- Keyboard settings
-awful.util.spawn_with_shell("xset r rate 150 20")
-
 -- Load display
 awful.util.spawn_with_shell("autorandr -c")

@@ -32,6 +32,7 @@
         path: vimrcs/*
         create: true
     ~/.Xresources:                  # Xresources
+    ~/.xsession:                    # xsession
     ~/.config/zathura/zathurarc:    # Zathura
         create: true
         path: zathura/zathurarc
@@ -49,3 +50,9 @@
         path: zsh/zshrc
     ~/.config/zsh/ascii_art:
         path: zsh/ascii_art
+
+- sudo:
+    - link:
+        /etc/X11/xorg.conf.d/:      # Xorg
+            glob: true
+            path: xorg/*
