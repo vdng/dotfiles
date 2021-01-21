@@ -11,6 +11,8 @@
     ~/.config/feh/keys:             # Feh
         path: feh/keys
         create: true
+    ~/.config/greenclip.cfg:        # Greenclip
+        path: greenclip/greenclip.cfg
     ~/.lesskey:                     # Lesskey
     ~/.config/networkmanager-dmenu/config.ini:  # Network manager dmenu
         path: networkmanager-dmenu/config.ini

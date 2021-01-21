@@ -83,5 +83,8 @@ awful.util.spawn_with_shell("xscreensaver -no-splash")
 -- Compositor
 awful.util.spawn_with_shell("picom -b")
 
+-- Clipboard manager
+awful.util.spawn_with_shell("greenclip daemon")
+
 -- Load display
 awful.util.spawn_with_shell("autorandr -c")

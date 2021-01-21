@@ -154,6 +154,10 @@ function _M.get()
               function () os.execute("rofi -show drun -terminal termite") end,
               {description = "Rofi drun"   , group = "launcher"}),
 
+    awful.key({ modkey }, "v",
+              function () os.execute("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'") end,
+              {description = "Rofi greenclip"   , group = "launcher"}),
+
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Resize
     awful.key({ modkey, "Control" }, "Down" , function () awful.client.moveresize( 0, 0,   0,  40) end),
