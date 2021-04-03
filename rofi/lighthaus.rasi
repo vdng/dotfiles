@@ -10,9 +10,9 @@
 
 
 configuration {
-    font:                 "Source Sans Pro 16";
+    font:                 "Source Sans Pro 14";
     show-icons:           true;
-    hide-scrollbar:       false;
+    hide-scrollbar:       true;
 
     drun-display-format:  "{icon} {name}";
     modi:                 "drun";
@@ -37,8 +37,8 @@ configuration {
 }
 
 #listview {
-    spacing:              10px;
-    columns:              1;
+    spacing:              1px;
+    columns:              2;
     margin:               0;
     dynamic:              true;
     padding:              0;
@@ -50,7 +50,7 @@ configuration {
     border-color:         @border-color;
     border:               3;
     border-radius:        5;
-    width:                25%;
+    width:                30%;
 }
 
 #mainbox {
@@ -90,11 +90,11 @@ configuration {
     enabled:              true;
     padding:              10;
     text-color:           @fg-input;
-    font:                 "Source Sans Pro 16" ;
+    font:                 "Source Sans Pro 14" ;
 }
 
 #entry {
     padding:              10 10 10 5;
     text-color:           @fg-input;
-    font:                 "Source Sans Pro 16";
+    font:                 "Source Sans Pro 14";
 }
