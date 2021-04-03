@@ -33,7 +33,7 @@ toggle_pause p
 toggle_pause # h
 size_to_image # w
 
-reload_image h
+reload_image l
 save_image w
 
 ################################################
