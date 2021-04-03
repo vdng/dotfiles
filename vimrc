@@ -89,6 +89,9 @@ syntax enable
 " utf-8 encoding
 set encoding=utf-8
 
+" Transparent background
+hi Normal guibg=NONE ctermbg=NONE
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 "             TEXT, TAB AND INDENTS            "
 """"""""""""""""""""""""""""""""""""""""""""""""
