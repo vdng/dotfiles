@@ -24,6 +24,9 @@
     ~/.config/mimi/mime.conf:       # Mimi
         path: mimi/mime.conf
         create: true
+    ~/.config/mirage/settings.py:   # Mirage
+        path: mirage/settings.py
+        create: true
     ~/.config/networkmanager-dmenu/config.ini:  # Network manager dmenu
         path: networkmanager-dmenu/config.ini
         create: true
