@@ -63,6 +63,10 @@
         path: termite/config
         create: true
     ~/.vimrc:                       # Vim
+    ~/.vim/coc-settings.json:
+        path: cocvim/coc-settings.json
+        create: true
+        force: true
     ~/.vim/vimrcs/:
         glob: true
         path: vimrcs/*

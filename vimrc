@@ -69,6 +69,9 @@ augroup CursorLine
     au WinLeave * setlocal nocursorline
 augroup END
 
+" Give more space for displaying messages.
+set cmdheight=2
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 "               COLORS AND FONTS               "
 """"""""""""""""""""""""""""""""""""""""""""""""
