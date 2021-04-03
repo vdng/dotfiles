@@ -24,11 +24,12 @@ articlelist-format "%D %?T?│%-30T  ?│ %t "
 ################################################
 #                 COLORSCHEME                  #
 ################################################
-color   listnormal          color230    default
-color   listnormal_unread   default     default
-color   listfocus           yellow      default
-color   listfocus_unread    yellow      default   bold
-color   info                black       cyan
+color   listnormal          color246    default
+color   listnormal_unread   color230    default
+color   listfocus           default     default
+color   listfocus_unread    default     default   bold
+color   info                cyan        default
+color   article             color230    default
 
 ################################################
 #                 KEYBINDINGS                  #
