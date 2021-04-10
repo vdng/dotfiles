@@ -1,0 +1,16 @@
+directory: ~/audio
+library: ~/audio/library.db
+
+import:
+    move: yes
+
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: $artist/$title
+    comp: compilations/$album%aunique{}/$track $title
+
+plugins: edit
+
+lastgenre:
+    prefer_specific: yes
+    count: 4
