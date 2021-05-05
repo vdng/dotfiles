@@ -59,3 +59,5 @@ URxvt.urgentOnBell    : true
 URxvt.depth           : 32
 URxvt.iso14755        : false
 
+Xcursor.theme: Bibata-Modern-Classic
+Xcursor.size: 16
