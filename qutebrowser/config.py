@@ -1524,8 +1524,8 @@ c.url.default_page = 'https://start.duckduckgo.com/'
 # qutebrowser`.
 # Type: Dict
 c.url.searchengines = {
-    'DEFAULT': 'https://duckduckgo.com/?q={}&kl=wt-wt&kj=18191e&kx=00bfa4&k7=18191e&k8=fffade&k9=ffee79&kaa=d16bb7&ka=Source+Sans+Pro&kt=Source+Sans+Pro&ks=m&ko=-2&kk=-1&kav=1&kaj=m&k21=21252d',
-    'ddg': 'https://duckduckgo.com/?q={}&kl=fr-fr&kj=18191e&kx=00bfa4&k7=18191e&k8=fffade&k9=ffee79&kaa=d16bb7&ka=Source+Sans+Pro&kt=Source+Sans+Pro&ks=m&ko=-2&kk=-1&kav=1&kaj=m&k21=21252d',
+    'DEFAULT': 'https://duckduckgo.com/?q={}&kl=wt-wt&kj=282a36&kx=f1fa8c&k7=282a36&k8=f8f8f2&k9=50fa7b&kaa=bd93f9&ka=Source+Sans+Pro&kt=Source+Sans+Pro&ks=m&ko=-2&kk=-1&kav=1&kaj=m&k21=282a36',
+    'ddg': 'https://duckduckgo.com/?q={}&kl=fr-fr&kj=282a36&kx=f1fa8c&k7=282a36&k8=f8f8f2&k9=50fa7b&kaa=bd93f9&ka=Source+Sans+Pro&kt=Source+Sans+Pro&ks=m&ko=-2&kk=-1&kav=1&kaj=m&k21=282a36',
     'gg': 'https://www.google.com/search?q={}',
     'ecs': 'https://www.ecosia.org/search?q={}',
     'qw': 'https://www.qwant.com/?q={}',
@@ -1977,5 +1977,12 @@ config.bind('é', 'move-to-next-word', mode='caret')
 #config.bind('y', 'prompt-accept yes', mode='yesno')
 
 # Theme
-config.source('themes/lighthaus.py')
+import dracula.draw
+
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 1,
+        'horizontal': 1
+    }
+})
 
