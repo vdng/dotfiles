@@ -40,47 +40,50 @@ browser = qutebrowser
 # "off", "left" or "right"
 #scrollbar = off
 
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-cursor = #ffff00
-cursor_foreground = #18191e
 
-foreground = #ffee79
-foreground_bold = #ffff00
-#background = #18191e
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = rgba(40, 42, 54, 1)
 
-# 20% background transparency (requires a compositor)
-background = rgba(24, 25, 30, 0.9)
+# black
+color0  = #000000
+color8  = #4d4d4d
 
-# If unset, will reverse foreground and background
-highlight = #090b26
+# red
+color1  = #ff5555
+color9  = #ff6e67
 
-# Colors from color0 to color254 can be set
-# Black
-color0  = #18191e
-color8  = #21252d
-# Red
-color1  = #fc2929
-color9  = #fc5050
-# Green
-color2  = #44b273
-color10 = #50c16e
-# Orange
-color3  = #e25600
-color11 = #ed722e
-# Blue
-color4  = #1d918b
-color12 = #47a8a1
-# Magenta
-color5  = #d16bb7
-color13 = #d68eb2
-# Cyan
-color6  = #00bfa4
-color14 = #5ad1aa
-# White
-color7  = #cccccc
-color15 = #fffade
+# green
+color2  = #50fa7b
+color10 = #5af78e
+
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
 
 [hints]
 #font = Monospace 12
