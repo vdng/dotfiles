@@ -1530,7 +1530,7 @@ c.url.searchengines = {
     'ecs': 'https://www.ecosia.org/search?q={}',
     'qw': 'https://www.qwant.com/?q={}',
     'gh': 'https://github.com/search?q={}',
-    'yt': 'https://invidious.zapashcanon.fr/search?q={}',
+    'yt': 'https://yewtu.be/search?q={}',
     'pt': 'https://peer.tube/search?search={}',
     'imslp': 'https://duckduckgo.com/?q=site%3Aimslp.org+{}&kl=wt-wt&kj=18191e&kx=00bfa4&k7=18191e&k8=fffade&k9=ffee79&kaa=d16bb7&ka=Source+Sans+Pro&kt=Source+Sans+Pro&ks=m&ko=-2&kk=-1&kav=1&kaj=m&k21=21252d&ia=web',
     'arch': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go',
