@@ -68,7 +68,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "picom -b", "greenclip daemon", "autorandr -c" }) -- comma-separated entries
+run_once({ "picom", "greenclip", "autorandr -c", "unclutter" }) -- comma-separated entries
 
 -- This function implements the XDG autostart specification
 --[[
@@ -86,10 +86,11 @@ awful.spawn.with_shell(
 
 local themes = {
     "powerarrow-dark", -- 1
-    "lighthaus"        -- 2
+    "lighthaus",       -- 2
+    "dracula",         -- 3
 }
 
-local chosen_theme = themes[1]
+local chosen_theme = themes[3]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "termite -t termite"
@@ -99,7 +100,6 @@ local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "qutebrowser"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
 awful.layout.layouts = {
     --awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -134,6 +134,10 @@ lain.layout.cascade.tile.offset_y      = 32
 lain.layout.cascade.tile.extra_padding = 5
 lain.layout.cascade.tile.nmaster       = 5
 lain.layout.cascade.tile.ncol          = 2
+
+awful.util.tagnames = { "", "", "", "", "", "", "", "ﱘ", "" }
+local l = awful.layout.suit
+awful.util.layouts = { l.tile, l.tile, l.tile, l.tile, l.tile, l.tile, l.tile, l.tile, lain.layout.termfair.center }
 
 awful.util.taglist_buttons = mytable.join(
     awful.button({ }, 1, function(t) t:view_only() end),
@@ -254,6 +258,10 @@ globalkeys = mytable.join(
     --          {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+
+    -- Toggle systray visibility
+    awful.key({ modkey,           }, "z", function() awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible end,
+              {description = "toggle systray visibility", group = "screen"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "t",
@@ -432,30 +440,43 @@ globalkeys = mytable.join(
     --          {description = "show weather", group = "widgets"}),
 
     -- Screen brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10 -fps 60") end,
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 5 -fps 60") end,
               {description = "brightness up%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10 -fps 60") end,
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 5 -fps 60") end,
               {description = "brighness down", group = "hotkeys"}),
+    awful.key({ modkey }, "XF86MonBrightnessUp", function () os.execute("pkill -USR1 '^redshift$'") end,
+              {description = "toggle redshift", group = "hotkeys"}),
 
     -- Audio volume
     awful.key({ }, "XF86AudioRaiseVolume",
         function()
-            os.execute(string.format("pactl set-sink-volume %s +2%%", W.lain_volume.device))
-            W.lain_volume.update()
+            os.execute(string.format("pactl set-sink-volume %s +2%%", beautiful.volume.device))
+            beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
     awful.key({ }, "XF86AudioLowerVolume",
         function()
-            os.execute(string.format("pactl set-sink-volume %s -2%%", W.lain_volume.device))
-            W.lain_volume.update()
+            os.execute(string.format("pactl set-sink-volume %s -2%%", beautiful.volume.device))
+            beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
     awful.key({ }, "XF86AudioMute",
         function()
-            os.execute(string.format("pactl set-sink-mute %s toggle", W.lain_volume.device))
-            W.lain_volume.update()
+            os.execute(string.format("pactl set-sink-mute %s toggle", beautiful.volume.device))
+            beautiful.volume.update()
         end,
-        {description = "mute", group = "hotkeys"})
+        {description = "mute", group = "hotkeys"}),
+
+    -- Media control
+    awful.key({ }, "XF86AudioPlay",
+        function() os.execute("playerctl play-pause") end,
+        {description = "play/pause", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioPrev",
+        function() os.execute("playerctl previous") end,
+        {description = "play/pause", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioNext",
+        function() os.execute("playerctl next") end,
+        {description = "play/pause", group = "hotkeys"})
 
     -- MPD control
     --awful.key({ altkey, "Control" }, "Up",
