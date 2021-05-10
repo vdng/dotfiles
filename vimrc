@@ -77,8 +77,7 @@ set cmdheight=2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " Colorscheme
-let g:lighthaus_vsplit_line_light = 1
-colorscheme lighthaus
+colorscheme dracula
 
 " True colors
 set termguicolors

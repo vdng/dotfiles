@@ -29,8 +29,8 @@ Plug 'chrisbra/Colorizer'
 " Display indent levels
 Plug 'Yggdroot/indentLine'
 
-" Lighthaus Theme
-Plug 'lighthaus-theme/vim-lighthaus'
+" Dracula Colorscheme
+Plug 'dracula/vim', {'name': 'dracula'}
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
@@ -52,9 +52,9 @@ let g:gitgutter_sign_modified_removed = ''
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                  VIM AIRLINE                 "
 """"""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'lighthaus'
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'lighthaus'
+"let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                    VIMWIKI                   "
