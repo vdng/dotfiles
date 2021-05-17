@@ -9,6 +9,7 @@ local gears       = require("gears")
 local lain        = require("lain")
 local awful       = require("awful")
 local wibox       = require("wibox")
+local naughty     = require("naughty")
 local xresources  = require("beautiful.xresources")
 local dpi         = xresources.apply_dpi
 local colorscheme = xresources.get_current_theme()
@@ -116,6 +117,27 @@ theme.widget_mail          = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on       = theme.dir .. "/icons/mail_on.png"
 theme.widget_brightness    = theme.dir .. "/icons/sun.png"
 
+-- Notifications
+theme.notification_icon_size = 48
+theme.notification_max_width = 300
+--theme.notification_max_height = 80
+theme.notification_border_width = 1
+theme.notification_border_color = palette["selection"]
+theme.notification_shape = gears.shape.rounded_rect
+theme.notification_bg = palette["background"]
+theme.notification_fg = palette["purple"]
+
+naughty.config.padding = 4
+naughty.config.spacing = 4
+
+naughty.config.defaults.screen = screen.primary
+naughty.config.defaults.bg = palette["background"]
+
+naughty.config.presets.critical.bg = palette["background"]
+naughty.config.presets.critical.fg = palette["red"]
+naughty.config.presets.low.bg = palette["background"]
+naughty.config.presets.low.fg = palette["comment"]
+
 local markup = lain.util.markup
 local separators = lain.util.separators
 
@@ -199,6 +221,9 @@ local mpris, mpris_timer = awful.widget.watch(
         if mpris_now.state == "Playing" then
             musicicon:set_image(theme.widget_music_on)
             widget:set_markup(markup.font(theme.font, markup("#ff79c6", mpris_now.artist) .. " " .. mpris_now.title .. " "))
+        elseif mpris_now.state == "Paused" then
+            musicicon:set_image(theme.widget_music)
+            widget:set_markup(markup.font(theme.font, markup("#6272a4", mpris_now.artist) .. " " .. mpris_now.title .. " "))
         else
             musicicon:set_image(theme.widget_music)
             widget:set_markup(markup.font(theme.font, ""))
@@ -260,6 +285,27 @@ local bat = lain.widget.bat({
             widget:set_markup(markup.font(theme.font, " AC "))
             baticon:set_image(theme.widget_ac)
         end
+        bat_notification_charged_preset = {
+            title = "Battery full",
+            text = "You can unplug the cable",
+            timeout = naughty.config.presets.low.timeout,
+            fg = naughty.config.presets.low.fg,
+            bg = naughty.config.presets.low.bg
+        }
+        bat_notification_low_preset = {
+            title = "Battery low",
+            text = "Plug the cable !",
+            timeout = naughty.config.presets.critical.timeout,
+            fg = naughty.config.presets.critical.fg,
+            bg = naughty.config.presets.critical.bg
+        }
+        bat_notification_critical_preset = {
+            title = "Battery exhausted",
+            text = "Imminent shutdown",
+            timeout = naughty.config.presets.critical.timeout,
+            fg = naughty.config.presets.critical.fg,
+            bg = naughty.config.presets.critical.bg
+        }
     end
 })
 
