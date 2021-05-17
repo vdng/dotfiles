@@ -52,9 +52,9 @@ let g:gitgutter_sign_modified_removed = ''
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                  VIM AIRLINE                 "
 """"""""""""""""""""""""""""""""""""""""""""""""
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'lighthaus'
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                    VIMWIKI                   "
