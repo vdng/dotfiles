@@ -1,8 +1,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                     LUA                      "
 """"""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.lua set shiftwidth=2
-autocmd BufNewFile,BufRead *.lua set softtabstop=2
+autocmd BufNewFile,BufRead *.lua set shiftwidth=4
+autocmd BufNewFile,BufRead *.lua set softtabstop=4
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                   LILYPOND                   "
