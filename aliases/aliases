@@ -86,11 +86,12 @@ alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 ##########################
-#         WIFI           #
+#      CONNECTIONS       #
 ##########################
 
 alias nmwl='nmcli device wifi list'
 alias nmwco='nmcli --ask device wifi connect'
+alias bt='bluetoothctl'
 
 ##########################
 #      YOUTUBE DL        #
