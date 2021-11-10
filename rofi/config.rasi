@@ -1,1 +1,15 @@
+configuration {
+    font:                 "Source Sans Pro 14";
+    show-icons:           true;
+    hide-scrollbar:       true;
+
+    drun-display-format:  "{icon} {name}";
+    modi:                 "drun";
+
+    display-drun:         "🔍";
+    display-run:          "";
+    display-ssh:          "🖧";
+    display-window:       "";
+}
+
 @theme "dracula"
