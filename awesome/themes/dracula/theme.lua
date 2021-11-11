@@ -51,14 +51,14 @@ theme.fg_urgent = palette['background']
 
 -- clients
 theme.border_width  = dpi(1)
-theme.border_focus  = palette['pink']
+theme.border_focus  = palette['purple']
 theme.border_normal = palette['comment']
 theme.border_marked = palette['orange']
 theme.useless_gap   = dpi(0)
 
 -- tasklist
 theme.tasklist_bg_focus        = palette['background']
-theme.tasklist_fg_focus        = palette['pink']
+theme.tasklist_fg_focus        = palette['purple']
 theme.tasklist_plain_task_name = false
 theme.tasklist_disable_icon    = true
 
@@ -68,16 +68,16 @@ theme.titlebar_bg_normal = theme.bg_normal
 theme.titlebar_fg_focus  = theme.fg_focus
 
 -- taglist
-theme.taglist_bg_focus    = palette['pink']
-theme.taglist_fg_focus    = palette['foreground']
-theme.taglist_bg_occupied = palette['comment']
+theme.taglist_bg_focus    = palette['background']
+theme.taglist_fg_focus    = palette['purple']
+theme.taglist_bg_occupied = palette['background']
 theme.taglist_fg_occupied = palette['foreground']
 theme.taglist_bg_empty    = palette['background']
-theme.taglist_fg_empty    = palette['foreground']
+theme.taglist_fg_empty    = palette['comment']
 theme.taglist_bg_volatile = palette['foreground']
 theme.taglist_fg_volatile = palette['background']
-theme.taglist_bg_urgent   = palette['yellow']
-theme.taglist_fg_urgent   = palette['background']
+theme.taglist_bg_urgent   = palette['background']
+theme.taglist_fg_urgent   = palette['yellow']
 
 -- layout
 theme.layout_tile        = theme.dir .. "/icons/tile.png"
@@ -220,10 +220,10 @@ local mpris, mpris_timer = awful.widget.watch(
 
         if mpris_now.state == "Playing" then
             musicicon:set_image(theme.widget_music_on)
-            widget:set_markup(markup.font(theme.font, markup("#ff79c6", mpris_now.artist) .. " " .. mpris_now.title .. " "))
+            widget:set_markup(markup.font(theme.font, markup(palette['purple'], mpris_now.artist) .. " " .. mpris_now.title .. " "))
         elseif mpris_now.state == "Paused" then
             musicicon:set_image(theme.widget_music)
-            widget:set_markup(markup.font(theme.font, markup("#6272a4", mpris_now.artist) .. " " .. mpris_now.title .. " "))
+            widget:set_markup(markup.font(theme.font, markup(palette['comment'], mpris_now.artist) .. " " .. mpris_now.title .. " "))
         else
             musicicon:set_image(theme.widget_music)
             widget:set_markup(markup.font(theme.font, ""))
