@@ -289,6 +289,11 @@ globalkeys = mytable.join(
     awful.key({ modkey, "Control"   }, "c",     function () awful.tag.incmwfact(-0.05) end,
               {description = "decrease master width factor", group = "layout"}),
 
+    awful.key({ modkey, "Control"   }, "z",     function () awful.tag.incnmaster( 1) end,
+              {description = "increase the number of master clients", group = "layout"}),
+    awful.key({ modkey, "Control"   }, "j",     function () awful.tag.incnmaster(-1) end,
+              {description = "decrease the number of master clients", group = "layout"}),
+
     -- Show help
     awful.key({ modkey,           }, "'",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
