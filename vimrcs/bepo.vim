@@ -80,12 +80,6 @@ noremap w<CR> :vsplit<CR>
 noremap « <
 noremap » >
 
-" Lazy scrolling
-" ——————————————
-noremap <BS> <PageUp>
-noremap <Space> <PageDown>
-noremap <Return> zz
-
 " Explore :Ex
 " ——————————————
 if has("autocmd")
