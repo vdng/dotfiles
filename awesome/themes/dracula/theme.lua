@@ -40,7 +40,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme     = {}
 theme.dir       = os.getenv("HOME") .. "/.config/awesome/themes/dracula"
 theme.lain_icons = "/usr/share/lua/5.3/lain/icons/layout/default/"
-theme.wallpaper = theme.dir .. "/wall.png"
+theme.wallpaper = "/home/trungtin/images/wallpapers/002.jpg"
 theme.font      = "Sauce Sans Pro 11"
 theme.bg_focus  = palette['selection']
 theme.fg_focus  = palette['foreground']
@@ -54,7 +54,7 @@ theme.border_width  = dpi(1)
 theme.border_focus  = palette['purple']
 theme.border_normal = palette['comment']
 theme.border_marked = palette['orange']
-theme.useless_gap   = dpi(0)
+theme.useless_gap   = dpi(4)
 
 -- tasklist
 theme.tasklist_bg_focus        = palette['background']
