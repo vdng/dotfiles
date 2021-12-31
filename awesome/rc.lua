@@ -68,7 +68,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "picom", "greenclip", "autorandr -c", "unclutter", "udiskie" }) -- comma-separated entries
+run_once({ "picom", "greenclip", "autorandr -c", "unclutter", "udiskie", "redshift-gtk" }) -- comma-separated entries
 
 -- This function implements the XDG autostart specification
 --[[
