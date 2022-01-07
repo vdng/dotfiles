@@ -1,0 +1,131 @@
+(defwindow album-cover
+    :monitor 0
+    :geometry (geometry :x "600px"
+                        :y "280px"
+                        :width "180px"
+                        :height "180px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"Album cover"
+)
+
+(defwindow player
+    :monitor 0
+    :geometry (geometry :x "600px"
+                        :y "480px"
+                        :width "350px"
+                        :height "130px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"player"
+)
+
+(defwindow wireless
+    :monitor 0
+    :geometry (geometry :x "600px"
+                        :y "630px"
+                        :width "350px"
+                        :height "110px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"wireless"
+)
+
+(defwindow workspaces
+    :monitor 0
+    :geometry (geometry :x "700px"
+                        :y "760px"
+                        :width "250px"
+                        :height "40px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"workspaces"
+)
+
+(defwindow clock
+    :monitor 0
+    :geometry (geometry :x "800px"
+                        :y "280px"
+                        :width "150px"
+                        :height "70px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"clock"
+)
+
+(defwindow date
+    :monitor 0
+    :geometry (geometry :x "800px"
+                        :y "370px"
+                        :width "150px"
+                        :height "90px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"date"
+)
+
+(defwindow xf86
+    :monitor 0
+    :geometry (geometry :x "970px"
+                        :y "280px"
+                        :width "90px"
+                        :height "150px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"xf86"
+)
+
+(defwindow battery
+    :monitor 0
+    :geometry (geometry :x "970px"
+                        :y "450px"
+                        :width "90px"
+                        :height "40px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"Battery"
+)
+
+(defwindow system
+    :monitor 0
+    :geometry (geometry :x "970px"
+                        :y "510px"
+                        :width "90px"
+                        :height "290px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"System"
+)
+
+(defwindow weather
+    :monitor 0
+    :geometry (geometry :x "1080px"
+                        :y "280px"
+                        :width "220px"
+                        :height "150px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"Weather"
+)
+
+(defwindow notifications
+    :monitor 0
+    :geometry (geometry :x "1080px"
+                        :y "450px"
+                        :width "220px"
+                        :height "350px"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+"Notifications"
+)
