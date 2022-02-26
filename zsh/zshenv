@@ -4,7 +4,7 @@
 #      EXPORT ENVIRONMENT VARIABLE      #
 #########################################
 
-export TERM='termite'
+export TERM='alacritty'
 export DOTFILES="$HOME/dotfiles"
 
 # XDG
