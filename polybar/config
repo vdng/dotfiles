@@ -1,0 +1,445 @@
+[colors]
+
+background = #282A36
+background-transparent = #EE44475A
+selection = #44475A
+foreground = #F8F8F2
+comment = #6272A4
+cyan = #8BE9FD
+green = #50FA7B
+orange = #FFB86C
+pink = #FF79C6
+purple = #BD93F9
+red = #FF5555
+yellow = #F1FA8C
+
+[bar/main-bar]
+width = 100%
+height = 28
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = true
+
+background = ${colors.background-transparent}
+foreground = ${colors.foreground}
+
+border-size = 4
+border-color = ${colors.background-transparent}
+
+padding-left = 0
+padding-right = 0
+
+# 1: icons
+font-0 = NotoSans Nerd Font:pixelsize=16;4
+# 2: i3-mode
+font-1 = Source Sans Pro:pixelsize=12;3
+# 3: glyphs
+font-2 = NotoSans Nerd Font:pixelsize=16;4
+# 4: text
+font-3 = SourceSans Pro:pixelsize=10;3
+
+modules-left =
+modules-center = xkeyboard i3
+modules-right = left-glyph network right-glyph left-glyph backlight sep pulseaudio right-glyph left-glyph battery right-glyph left-glyph date right-glyph
+#modules-right = filesystem xkeyboard memory cpu wlan eth temperature
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#locale = fr_FR.utf8
+
+[module/i3]
+type = internal/i3
+
+format = <label-state><label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; only show workspaces on the same output as the bar
+pin-workspaces = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 7;
+ws-icon-5 = 8;
+ws-icon-6 = 9;
+ws-icon-7 = 10;
+
+ws-icon-default = 
+
+label-mode-padding    = 2
+label-mode-foreground = ${colors.pink}
+label-mode-background = ${colors.background-transparent}
+label-mode-font       = 2
+
+label-focused            = %icon%
+label-focused-foreground = ${colors.pink}
+label-focused-padding    = 2
+label-focused-font       = 1
+
+label-unfocused            = %icon%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${self.label-focused-background}
+label-unfocused-padding    = ${self.label-focused-padding}
+label-unfocused-font       = ${self.label-focused-font}
+
+label-visible            = %icon%
+label-visible-foreground = ${colors.yellow}
+label-visible-background = ${self.label-focused-background}
+label-visible-padding    = ${self.label-focused-padding}
+label-visible-font       = ${self.label-focused-font}
+
+label-urgent            = 
+label-urgent-foreground = ${colors.orange}
+label-urgent-background = ${self.label-focused-background}
+label-urgent-padding    = ${self.label-focused-padding}
+label-urgent-font       = ${self.label-focused-font}
+
+[module/backlight]
+type = internal/backlight
+
+card = intel_backlight
+
+format = <ramp> <label>
+format-background = ${colors.comment}
+
+label = %percentage%
+label-font = 4
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 1
+ramp-foreground = ${colors.yellow}
+ramp-padding-right = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume><label-volume>
+format-volume-background = ${colors.comment}
+
+label-volume = %percentage%
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.comment}
+label-volume-font = 4
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+ramp-volume-7 = 
+ramp-volume-8 = 
+ramp-volume-9 = 
+ramp-volume-font = 1
+ramp-volume-foreground = ${colors.green}
+ramp-volume-background = ${colors.comment}
+ramp-volume-padding-right = 2
+
+format-muted = <label-muted>
+format-muted-background = ${colors.comment}
+
+label-muted = 
+label-muted-foreground = ${colors.red}
+label-muted-background = ${colors.comment}
+
+[module/date]
+type = internal/date
+
+interval = 60
+
+label = %date% %time%
+label-background = ${colors.comment}
+label-font = 4
+
+date =
+date-alt = %d %B
+
+time = %H:%M
+time-alt = %H:%M
+
+format-prefix = 
+format-prefix-foreground = ${colors.cyan}
+format-prefix-background = ${colors.comment}
+format-prefix-padding-right = 1
+format-prefix-font = 1
+
+[module/network]
+type = internal/network
+interface = wlp115s0
+
+accumulate-stats = true
+
+unknown-as-up = true
+
+format-connected = <label-connected>
+
+format-connected-prefix = 直
+format-connected-prefix-foreground = ${colors.pink}
+format-connected-prefix-background = ${colors.comment}
+format-connected-prefix-padding-right = 2
+format-connected-prefix-font = 2
+
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
+label-connected-background = ${colors.comment}
+label-connected-font = 4
+
+format-disconnected = <label-disconnected>
+
+label-disconnected = 睊
+label-disconnected-foreground = ${color.red}
+label-disconnected-background = ${color.background-alt}
+
+
+
+
+[module/left-glyph]
+type = custom/text
+content = ""
+content-background = ${colors.background-transparent}
+content-foreground = ${colors.comment}
+content-font = 3
+
+[module/right-glyph]
+type = custom/text
+content = ""
+content-background = ${colors.background-transparent}
+content-foreground = ${colors.comment}
+content-font = 3
+
+[module/lg-cyan]
+inherit = module/left-glyph
+content-foreground = ${colors.cyan}
+
+[module/rg-cyan]
+inherit = module/right-glyph
+content-foreground = ${colors.cyan}
+
+[module/lg-green]
+inherit = module/left-glyph
+content-foreground = ${colors.green}
+
+[module/rg-green]
+inherit = module/right-glyph
+content-foreground = ${colors.green}
+
+[module/lg-orange]
+inherit = module/left-glyph
+content-foreground = ${colors.orange}
+
+[module/rg-orange]
+inherit = module/right-glyph
+content-foreground = ${colors.orange}
+
+[module/lg-pink]
+inherit = module/left-glyph
+content-foreground = ${colors.pink}
+
+[module/rg-pink]
+inherit = module/right-glyph
+content-foreground = ${colors.pink}
+
+[module/lg-purple]
+inherit = module/left-glyph
+content-foreground = ${colors.purple}
+
+[module/rg-purple]
+inherit = module/right-glyph
+content-foreground = ${colors.purple}
+
+[module/lg-red]
+inherit = module/left-glyph
+content-foreground = ${colors.red}
+
+[module/rg-red]
+inherit = module/right-glyph
+content-foreground = ${colors.red}
+
+[module/lg-yellow]
+inherit = module/left-glyph
+content-foreground = ${colors.yellow}
+
+[module/rg-yellow]
+inherit = module/right-glyph
+content-foreground = ${colors.yellow}
+
+[module/sep]
+type = custom/text
+content = " "
+content-background = ${colors.comment}
+content-padding = 1
+
+[module/sep-transparent]
+type = custom/text
+content = " "
+content-background = ${colors.background-transparent}
+content-padding = 1
+
+
+
+
+
+
+
+
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/eth]
+type = internal/network
+interface = vethXMvGig
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 99
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${colors.comment}
+
+label-discharging = %percentage%
+label-discharging-font = 4
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-font = 1
+ramp-capacity-foreground = ${colors.purple}
+
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${colors.comment}
+
+label-charging = %percentage%
+label-charging-font = 4
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.purple}
+
+label-full = ﮣ
+label-full-foreground = ${colors.purple}
+label-full-background = ${colors.comment}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+
+format = <label-indicator>
+
+label-indicator-on = %icon%
+indicator-icon-0 = caps lock;;
+
+label-indicator-on-foreground = ${colors.red}
+label-indicator-on-background = ${colors.comment}
+label-indicator-on-padding-right = 2
+label-indicator-on-font = 2
+
+
