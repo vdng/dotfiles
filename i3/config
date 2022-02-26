@@ -1,0 +1,207 @@
+# General
+# =======
+
+# font
+font pango:Hack Nerd Font 12
+
+# variables
+set $mod Mod4
+set $up s
+set $down t
+set $left c
+set $right r
+
+# reload the configuration file
+bindsym $mod+Control+w reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Control+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Start
+# =====
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id autorandr -c
+exec --no-startup-id eww daemon
+exec --no-startup-id picom --experimental-backends
+exec --no-startup-id redshift
+exec --no-startup-id xset s 300 5 &
+exec --no-startup-id xss-lock -n /usr/lib/xsecurelock/dimmer -l -- env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=cursor XSECURELOCK_AUTH_BACKGROUND_COLOR=black XSECURELOCK_AUTH_FOREGROUND_COLOR=#f8f8f2 XSECURELOCK_AUTH_TIMEOUT=5 XSECURELOCK_BLANK_TIMEOUT=5 XSECURELOCK_BLANK_DPMS_STATE=off XSECURELOCK_SHOW_HOSTNAME=0 xsecurelock &
+exec_always --no-startup-id ~/.fehbg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id eww reload
+
+# Media
+# =====
+
+# volume
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 -fps 60
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 -fps 60
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id pkill -USR1 '^redshift$'
+
+# Mouse
+# =====
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Applications
+# ============
+
+# Terminal
+bindsym $mod+Return exec alacritty
+
+# dmenu
+# =====
+
+# start dmenu
+bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
+
+# Widgets
+# =======
+
+bindsym $mod+comma exec --no-startup-id $HOME/bin/dashboard.sh
+
+# Windows
+# =======
+
+# kill focused window
+bindsym $mod+q kill
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# change focus between tiling / floating windows
+bindsym $mod+Tab focus mode_toggle
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+# toggle tiling / floating
+bindsym $mod+n floating toggle
+
+# toggle fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Layouts
+# =======
+
+# toggle split container's orientation
+bindsym $mod+w split toggle
+
+# change container layout (stacked, tabbed, split)
+bindsym $mod+z layout toggle splitv splith tabbed
+
+# focus the parent/child container
+bindsym $mod+g focus parent
+bindsym $mod+h focus child
+
+# resize window
+bindsym $mod+Control+h mode "resize"
+mode "resize" {
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        bindsym Escape mode "default"
+}
+
+# Workspaces
+# ==========
+
+# workspaces variable to avoid repeating the names
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws0 10
+
+# switch to workspace
+bindsym $mod+b workspace number $ws1
+bindsym $mod+eacute workspace number $ws2
+bindsym $mod+p workspace number $ws3
+bindsym $mod+o workspace number $ws4
+bindsym $mod+v workspace number $ws7
+bindsym $mod+d workspace number $ws8
+bindsym $mod+l workspace number $ws9
+bindsym $mod+j workspace number $ws0
+
+# move focused container to workspace
+bindsym $mod+Shift+b move container to workspace number $ws1
+bindsym $mod+Shift+eacute move container to workspace number $ws2
+bindsym $mod+Shift+p move container to workspace number $ws3
+bindsym $mod+Shift+o move container to workspace number $ws4
+bindsym $mod+Shift+v move container to workspace number $ws7
+bindsym $mod+Shift+d move container to workspace number $ws8
+bindsym $mod+Shift+l move container to workspace number $ws9
+bindsym $mod+Shift+j move container to workspace number $ws0
+
+# put workspace on adequate screen
+workspace $ws1 output DP1 eDP1
+workspace $ws2 output DP1 eDP1
+workspace $ws3 output DP1 eDP1
+workspace $ws4 output DP1 eDP1
+workspace $ws7 output eDP1
+workspace $ws8 output eDP1
+workspace $ws9 output eDP1
+workspace $ws0 output eDP1
+
+# put client on adequate workspace
+assign [class="discord"] $ws9
+assign [class="Element"] $ws0
+assign [class="TelegramDesktop"] $ws0
+assign [title="WhatsApp"] $ws0
+for_window [class="Spotify"] move to workspace $ws7
+for_window [class="KeePassXC"] floating enable
+
+# Style
+# =====
+
+# dracula color scheme
+set $background #282A36
+set $current_line #44475A
+set $selection #44475A
+set $foreground #F8F8F2
+set $comment #6272A4
+set $cyan #8BE9FD
+set $green #50FA7B
+set $orange #FFB86C
+set $pink #FF79C6
+set $purple #BD93F9
+set $red #FF5555
+set $yellow #F1FA8C
+
+# client borders
+# class                 border      bground     text        indicator   child_border
+client.focused          $purple     $comment    $foreground $pink       $purple
+client.focused_inactive $selection  $selection  $foreground $selection  $selection
+client.unfocused        $background $background #BFBFBF     $background $background
+client.urgent           $selection  $red        $foreground $red        $red
+client.placeholder      $background $background $foreground $background $background
+
+client.background       $foreground
+
+default_border pixel 3
+default_floating_border pixel 1
+
+# gaps
+gaps outer 4
+gaps inner 4
+
