@@ -746,7 +746,7 @@ c.fileselect.single_file.command = ['termite', '-e', 'ranger --choosefile={}']
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = ['Hack Nerd Font']
+c.fonts.default_family = ['Iosevka Nerd Font']
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
@@ -781,19 +781,19 @@ c.fonts.default_size = '12pt'
 
 ## Font used for prompts.
 ## Type: Font
-c.fonts.prompts = 'default_size Source Sans Pro'
+##c.fonts.prompts = 'default_size default_family'
 
 ## Font used in the statusbar.
 ## Type: Font
-c.fonts.statusbar = 'default_size Source Sans Pro'
+##c.fonts.statusbar = 'default_size default_family'
 
 ## Font used for selected tabs.
 ## Type: Font
-c.fonts.tabs.selected = 'default_size Source Sans Pro'
+##c.fonts.tabs.selected = 'default_size default_family'
 
 ## Font used for unselected tabs.
 ## Type: Font
-c.fonts.tabs.unselected = 'default_size Source Sans Pro'
+##c.fonts.tabs.unselected = 'default_size default_family'
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
@@ -809,11 +809,11 @@ c.fonts.tabs.unselected = 'default_size Source Sans Pro'
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.sans_serif = 'Source Sans Pro'
+c.fonts.web.family.sans_serif = 'Gidole'
 
 ## Font family for serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.serif = 'Source Serif Pro'
+c.fonts.web.family.serif = 'DejaVu Serif'
 
 ## Font family for standard fonts.
 ## Type: FontFamily
@@ -852,7 +852,7 @@ c.fonts.web.size.default = 18
 
 # Characters used for hint strings.
 # Type: UniqueCharString
-c.hints.chars = 'auieovtsrn'
+c.hints.chars = 'vdljtsrnqghf'
 
 # Dictionary file to be used by the word hints.
 # Type: File
