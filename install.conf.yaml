@@ -4,9 +4,17 @@
     ~/.config/aliases/aliases:      # Aliases
         path: aliases/aliases
         create: true
+    ~/.config/alacritty: # Alacritty
+        glob: true
+        path: alacritty/*
+        create: true
     ~/.config/awesome/:             # AwesomeWM
         glob: true
         path: awesome/*
+        create: true
+    ~/.config/eww:                  # eww
+        glob: true
+        path: eww/*
         create: true
     ~/.config/feh/keys:             # Feh
         path: feh/keys
@@ -20,6 +28,15 @@
         glob: true
         path: gtk-3.0/*
         force: true
+    ~/.config/khard/khard.conf:     # Khard
+        path: khard/khard.conf
+        create: true
+    ~/.config/i3/config:            # i3
+        path: i3/config
+        create: true
+    ~/.config/i3status-rust/config.toml: # i3status-rust
+        path: i3status-rust/config.toml
+        create: true
     ~/.lesskey:                     # Lesskey
     ~/.config/mimi/mime.conf:       # Mimi
         path: mimi/mime.conf
@@ -37,8 +54,15 @@
     ~/.config/picom/picom.conf:     # Picom
         path: picom/picom.conf
         create: true
+    ~/.config/polybar/:       # Polybar
+        glob: true
+        path: polybar/*
+        create: true
     ~/.config/pulsemixer.cfg:       # Pulsemixer
         path: pulsemixer/pulsemixer.cfg
+    ~/.config/qtile/config.py:      # Qtile
+        path: qtile/config.py
+        create: true
     ~/.config/qutebrowser/:         # Qutebrowser
         glob: true
         path: qutebrowser/*
@@ -71,10 +95,10 @@
         glob: true
         path: vimrcs/*
         create: true
+    ~/.xinitrc:                     # xinitrc
     ~/.Xresources:                  # Xresources
     ~/.xscreensaver:                # Xscreensaver
         force: true
-    ~/.xsession:                    # xsession
     ~/.config/zathura/zathurarc:    # Zathura
         create: true
         path: zathura/zathurarc
@@ -103,8 +127,6 @@
         /etc/X11/xorg.conf.d/:      # X11
             glob: true
             path: X11/xorg/*
-        /usr/share/X11/xkb/symbols/fr:
-            path: X11/xkb/fr
 
 - git:
     ~/.config/zsh/plugins/fast-syntax-highlighting:
