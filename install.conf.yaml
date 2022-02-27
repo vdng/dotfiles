@@ -28,14 +28,15 @@
         glob: true
         path: gtk-3.0/*
         force: true
-    ~/.config/khard/khard.conf:     # Khard
-        path: khard/khard.conf
+    ~/.config/helix/:
+        glob: true
+        path: helix/*
         create: true
     ~/.config/i3/config:            # i3
         path: i3/config
         create: true
-    ~/.config/i3status-rust/config.toml: # i3status-rust
-        path: i3status-rust/config.toml
+    ~/.config/khard/khard.conf:     # Khard
+        path: khard/khard.conf
         create: true
     ~/.lesskey:                     # Lesskey
     ~/.config/mimi/mime.conf:       # Mimi
@@ -54,7 +55,7 @@
     ~/.config/picom/picom.conf:     # Picom
         path: picom/picom.conf
         create: true
-    ~/.config/polybar/:       # Polybar
+    ~/.config/polybar/:             # Polybar
         glob: true
         path: polybar/*
         create: true

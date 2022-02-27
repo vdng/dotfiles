@@ -1,0 +1,10 @@
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+injection-regex = "cpp"
+file-types = ["cc", "hh", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino"]
+roots = []
+comment-token = "//"
+
+language-server = { command = "clangd" }
+indent = { tab-width = 2, unit = "  " }
