@@ -1,0 +1,73 @@
+@import "dracula.scss";
+
+* {
+    all: unset;
+    background-color: $background;
+    color: $foreground;
+    border-radius: 10px;
+    font-family: Iosevka Nerd Font;
+    font-size: 18px;
+}
+
+// Progress bars
+// =============
+progressbar.vertical trough, progressbar.vertical progress { min-width: 10px; }
+progressbar.horizontal trough, progressbar.horizontal progress { min-height: 10px; }
+progressbar trough { background-color: $selection; }
+
+// Background
+// ==========
+
+.bg {
+    background-image: url("/home/trungtin/images/wallpapers/002.jpg");
+    background-size: cover;
+}
+
+// Player
+// ======
+
+.player { padding-left: 20px; }
+
+.music-title-icon { color: $green; }
+
+.album-icon { color: $cyan; }
+
+.artist-icon { color: $orange; }
+
+// Wirless
+// =======
+
+.wifi { padding-left: 20px; }
+
+
+// Clock
+// =====
+
+.time { font-size: 40px; }
+
+// XF86
+// ====
+
+.xf86 box progressbar{ min-height: 130px; }
+
+.brightness progress { background-color: $yellow; }
+.brightness label { color: $yellow; }
+
+.volume progress { background-color: $purple; }
+.volume label { color: $purple; }
+
+// System
+// ======
+
+.system { padding-left: 20px; }
+.system label { margin-right: 10px; }
+.system progressbar { min-width: 170px; }
+
+.cpu progress { background-color: $green; }
+.cpu label { color: $green; }
+
+.ram progress { background-color: $cyan; }
+.ram label { color: $cyan; }
+
+.disk progress { background-color: $orange; }
+.disk label { color: $orange; }

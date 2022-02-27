@@ -1,0 +1,91 @@
+(include "variables.yuck")
+
+(defwidget backgroundWidget []
+        (box    :class "bg")
+)
+
+(defwidget clockWidget []
+        (box    :orientation "h" :space-evenly "false" :valign "center" :halign "center" :spacing "10"
+                (label  :text "${time}" :class "time")
+        )
+)
+
+(defwidget dateWidget []
+        (box    :orientation "v" :space-evenly "false" :valign "center" :halign "center" :spacing "10"
+                (label  :text "${day}")
+                (label  :text "${date}")
+        )
+)
+
+(defwidget playerWidget []
+        (box    :orientation "v" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label  :text "" :class "music-title-icon")
+                        (label  :text "Autumn leaves"))
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label  :text "﫭" :class "album-icon")
+                        (label  :text "Somethin' Else"))
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label  :text "" :class "artist-icon")
+                        (label  :text "Canonball Aderley"))
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label  :text "契")
+                        (label  :text "0:51 / 2:43"))
+        )
+)
+
+(defwidget wifiWidget []
+        (box    :orientation "v" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label :text "直")
+                        (label :text "SFR_3B40_5GHZ"))
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label :text "")
+                        (label :text "0.20 KB/s"))
+                (box    :orientation "h" :space-evenly "false" :halign "start" :spacing "10"
+                        (label :text "直")
+                        (label :text "JBL Flip 5"))))
+
+(defwidget workspacesWidget []
+        (box    :orientation "h" :space-evenly "false" :valign "center" :halign "center" :spacing "20"
+                (label :text "1")
+                (label :text "2")
+                (label :text "3")
+                (label :text "4")
+                (label :text "7")
+                (label :text "8")
+                (label :text "9")
+                (label :text "0")
+        )
+)
+
+(defwidget batteryWidget []
+        (box    :orientation "h" :space-evenly "false" :valign "center" :halign "center" :spacing "10"
+                (label :text "")
+                (label :text "55 %")
+        )
+)
+
+(defwidget xf86Widget []
+        (box    :orientation "h" :space-evenly "false" :valign "center" :halign "center" :spacing "30"
+                (box    :class "brightness" :orientation "v" :space-evenly "false" :halign "center" :spacing "10"
+                        (progress   :orientation "v" :flipped "true" :value "65")
+                        (label      :text ""))
+                (box    :class "volume" :orientation "v" :space-evenly "false" :halign "center" :spacing "10"
+                        (progress   :orientation "v" :flipped "true" :value "30")
+                        (label      :text "墳"))))
+
+(defwidget systemWidget []
+        (box    :orientation "v" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                (box    :class "cpu" :orientation "h" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                        (label      :text "龍" :valign "center")
+                        (progress   :orientation "h" :valign "center" :value "25"))
+                (box    :class "ram" :orientation "h" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                        (label      :text "" :valign "center")
+                        (progress   :orientation "h" :valign "center" :value "45"))
+                (box    :class "disk" :orientation "h" :space-evenly "false" :valign "center" :halign "start" :spacing "10"
+                        (label      :text "" :valign "center")
+                        (progress   :orientation "h" :valign "center" :value "85"))))
+
+(defwidget calendarWidget []
+        (calendar))
