@@ -12,6 +12,9 @@
         glob: true
         path: awesome/*
         create: true
+    ~/.config/dunst/dunstrc:
+        path: dunst/dunstrc
+        create: true
     ~/.config/eww:                  # eww
         glob: true
         path: eww/*
